@@ -129,7 +129,7 @@
         <!-- Botón 1-->
         <button
           id="btn-automatizacion"
-          class="group opacity-0 blur-sm reveal-btn relative w-48 h-54 px-6 py-3 md:px-10 md:py-6 bg-[rgb(0,34,77)] text-black md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center"
+          class="group opacity-0 blur-sm reveal-btn relative w-48 h-54 px-6 py-3 md:px-10 md:py-6 bg-[rgb(0,34,77)] text-black md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-500 hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center"
         >
           <div class="text-4xl mb-2">🚀</div>
           <div>Automatización y Productividad</div>
@@ -144,7 +144,7 @@
         <!-- Botón 2-->
         <button
           id="btn-IA"
-          class="group opacity-0 blur-sm reveal-btn relative w-48 h-54 px-6 py-3 md:px-10 md:py-6 bg-[rgb(93,14,65)] text-black md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-300 delay-[300ms] hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center"
+          class="group opacity-0 blur-sm reveal-btn relative w-48 h-54 px-6 py-3 md:px-10 md:py-6 bg-[rgb(93,14,65)] text-black md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-500 hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center"
         >
           <div class="text-4xl mb-2">🤖</div>
           <div>Business Intelligence</div>
@@ -159,7 +159,7 @@
         <!-- Botón 3-->
         <button
           id="btn-reporting"
-          class="group opacity-0 blur-sm reveal-btn relative w-48 h-54 px-6 py-3 md:px-10 md:py-6 bg-[rgb(160,21,62)] text-black md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-300 delay-[600ms] hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center"
+          class="group opacity-0 blur-sm reveal-btn relative w-48 h-54 px-6 py-3 md:px-10 md:py-6 bg-[rgb(160,21,62)] text-black md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-500 hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center"
         >
           <div class="text-4xl mb-2">📊</div>
           <div>Visualización de datos - Reporting</div>
@@ -174,7 +174,7 @@
         <!-- Botón 4-->
         <button
           id="btn-diagnostico"
-          class="group opacity-0 blur-sm reveal-btn relative w-48 h-54 px-6 py-3 md:px-10 md:py-6 bg-[rgb(255,32,78)] text-black md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-300 delay-[900ms] hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center text-center"
+          class="group opacity-0 blur-sm reveal-btn relative w-48 h-54 px-6 py-3 md:px-10 md:py-6 bg-[rgb(255,32,78)] text-black md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-500 hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center text-center"
         >
           <div class="text-4xl mb-2">📝</div>
           <div>Diagnóstico Digital y Plan de Acción</div>
@@ -204,23 +204,25 @@
           <img
             src="images/services/service1.png"
             alt="Automatizacion_y_productividad"
-            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-3xl"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl"
           />
         </div>
 
-        <p class="text-center text-gray-400 mb-8 text-lg">
+        <p class="text-center text-fuchsia-200 mb-8 text-lg font-bold">
           Descubre todo lo que podemos ofrecerte para impulsar tu negocio al
           siguiente nivel
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center group group-hover:overflow-visible"
+        >
           <!-- O365 -->
           <div
-            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-150 hover:z-10 max-w-xs md:max-w-lg"
           >
             <img
               src="images/services/cat1_serv1.png"
               alt="automatizacion_Servicio 1"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-cover transition-all duration-300 group-hover:h-72"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
@@ -242,12 +244,12 @@
           </div>
           <!-- Soluciones -->
           <div
-            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-150 hover:z-10 max-w-xs md:max-w-lg"
           >
             <img
               src="images/services/cat1_serv2.png"
               alt="automatizacion_Servicio 2"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-cover transition-all duration-300 group-hover:h-72"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
@@ -270,12 +272,12 @@
           </div>
           <!-- Automatizacion -->
           <div
-            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-150 hover:z-10 max-w-xs md:max-w-lg"
           >
             <img
               src="images/services/cat1_serv3.png"
               alt="automatizacion_Servicio 3"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-cover transition-all duration-300 group-hover:h-72"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
@@ -297,12 +299,12 @@
           </div>
           <!-- Alertas -->
           <div
-            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-150 hover:z-10 max-w-xs md:max-w-lg"
           >
             <img
               src="images/services/cat1_serv4.png"
               alt="automatizacion_Servicio 4"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-cover transition-all duration-300 group-hover:h-72"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
@@ -343,23 +345,25 @@
           <img
             src="images/services/service2.png"
             alt="IA"
-            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-3xl"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl"
           />
         </div>
-        <p class="text-center text-gray-400 mb-8 text-lg">
+        <p class="text-center text-fuchsia-200 mb-8 text-lg font-bold">
           Descubre como la IA puede ayudarte a tomar decisiones más precisas y
           hacer tu negocio más autónomo y eficiente
         </p>
-        <div class="grid grid-cols-1 gap-8 justify-items-center">
+        <div
+          class="grid grid-cols-1 gap-8 justify-items-center overflow-visible"
+        >
           <!-- IA -->
           <div
-            class="bg-gradient-to-br from-indigo-800 to-grey-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col max-w-lg"
+            class="group group-hover:overflow-visible bg-gradient-to-br from-indigo-800 to-grey-800 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-150 hover:z-10 flex flex-col max-w-xs md:max-w-lg"
           >
             <img
               src="images/services/cat2_serv1.png"
               alt="IA_Servicio 1"
-              class="w-full h-48 object-cover"
-              style="object-position: 50% 20%;"
+              class="w-full h-48 object-cover transition-all duration-300 group-hover:h-72"
+              style="object-position: 50% 20%"
             />
             <div class="p-6 flex-1 flex flex-col">
               <h3 class="text-xl font-semibold text-white mb-2">
@@ -400,7 +404,7 @@
     <section id="reporting" class="bg-[rgb(160,21,62)] py-12">
       <div class="container mx-auto px-4">
         <h2
-          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-indigo-600 via-pink-400 to-blue-500 bg-clip-text text-transparent"
+          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-indigo-700 via-fuchsia-400 to-blue-700 bg-clip-text text-transparent"
         >
           Visualización de datos - Reporting
         </h2>
@@ -408,21 +412,21 @@
           <img
             src="images/services/service3.png"
             alt="Reporting"
-            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-3xl"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl"
           />
         </div>
-        <p class="text-center text-gray-400 mb-8 text-lg">
+        <p class="text-center text-fuchsia-200 mb-8 text-lg font-bold">
           Tus números, en tiempo real
         </p>
         <div class="grid grid-cols-1 gap-8 justify-items-center">
           <!-- Reporting -->
           <div
-            class="bg-gradient-to-br from-indigo-800 to-pink-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col max-w-lg"
+            class="group group-hover:overflow-visible bg-gradient-to-br from-indigo-800 to-pink-950 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-150 hover:z-10 flex flex-col max-w-xs md:max-w-lg"
           >
             <img
               src="images/services/cat3_serv1.png"
               alt="Reporting_Servicio 1"
-              class="w-full h-48 object-cover object-top"
+              class="w-full h-48 object-cover object-top transition-all duration-300 group-hover:h-72"
             />
             <div class="p-6 flex-1 flex flex-col">
               <h3 class="text-xl font-semibold text-white mb-2">
@@ -468,23 +472,25 @@
           <img
             src="images/services/service4.png"
             alt="Diagnostico"
-            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-3xl"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl"
           />
         </div>
-        <p class="text-center text-gray-800 mb-8 text-lg">
+        <p class="text-center text-fuchsia-200 mb-8 text-lg font-bold">
           ¿No sabes por dónde empezar? Nosotros analizamos tu empresa y te
           decimos qué procesos puedes mejorar, automatizar o digitalizar. Paso a
           paso, y adaptado a tu realidad.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center group group-hover:overflow-visible"
+        >
           <!-- Evaluacion -->
           <div
-            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-150 hover:z-10 max-w-xs md:max-w-lg"
           >
             <img
               src="images/services/cat4_serv1.png"
               alt="catchup_Servicio 1"
-              class="w-full h-48 object-cover object-top"
+              class="w-full h-48 object-cover object-top transition-all duration-300 group-hover:h-72"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
@@ -509,13 +515,13 @@
           </div>
           <!-- Formaciones -->
           <div
-            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-150 hover:z-10 max-w-xs md:max-w-lg"
           >
             <img
               src="images/services/cat4_serv2.png"
               alt="catchup_Servicio 2"
-              class="w-full h-48 object-cover"
-              style="object-position: 50% 20%;"
+              class="w-full h-48 object-cover transition-all duration-300 group-hover:h-72"
+              style="object-position: 50% 20%"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
@@ -542,13 +548,13 @@
           </div>
           <!-- Soporte -->
           <div
-            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-150 hover:z-10 max-w-xs md:max-w-lg"
           >
             <img
               src="images/services/cat4_serv3.png"
               alt="catchup_Servicio 3"
-              class="w-full h-48 object-cover"
-              style="object-position: 50% 20%;"
+              class="w-full h-48 object-cover transition-all duration-300 group-hover:h-72"
+              style="object-position: 50% 20%"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
@@ -573,6 +579,8 @@
         </div>
       </div>
     </section>
+
+    <div class="h-56 bg-gradient-to-b from-[rgb(255,32,78,0.6)] to-black"></div>
 
     <div class="w-full h-[3px] bg-black"></div>
 
