@@ -35,3 +35,14 @@
     transform: translateY(25px) rotate(-2deg);
   }
 }
+
+.animate-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 4s ease-out, transform 4s ease-out;
+    }
+    /* Cuando aparece: restaura opacidad y posición */
+    .animate-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }

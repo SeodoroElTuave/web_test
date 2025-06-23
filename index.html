@@ -94,10 +94,7 @@
           playsinline
           class="absolute inset-0 w-full h-full object-cover z-0"
         >
-          <source
-            src="media/ReadyInnova_Commercial.mp4"
-            type="video/mp4"
-          />
+          <source src="media/ReadyInnova_Commercial.mp4" type="video/mp4" />
           Tu navegador no soporta vídeos HTML5.
         </video>
       </div>
@@ -126,9 +123,7 @@
       <!-- Menú de servicios-->
       <section
         class="text-white py-20 px-6 bg-no-repeat bg-center bg-cover"
-        style="
-          background-image: url('images/index/backgroundIndex.png');
-        "
+        style="background-image: url('images/index/backgroundIndex.png')"
       >
         <!-- Texto superior -->
         <div class="max-w-6xl mx-auto mb-12 text-left">
@@ -146,7 +141,10 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
         >
           <!-- Tarjeta 1 -->
-          <div class="relative group rounded-xl overflow-hidden shadow-lg">
+          <a
+            href="services.html#automatizacion"
+            class="block relative group rounded-xl overflow-hidden shadow-lg"
+          >
             <img
               src="images/index/Services1.png"
               alt="Servicio 1"
@@ -155,16 +153,19 @@
             <div
               class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"
             ></div>
-            <a
-              href="services.html#automatizacion"
+            <!-- Ahora es un span, porque el <a> ya envuelve todo -->
+            <span
               class="absolute bottom-4 left-4 bg-white text-black font-semibold py-2 px-4 rounded-full text-sm hover:bg-zinc-200 transition"
             >
               Automatización y Productividad
-            </a>
-          </div>
+            </span>
+          </a>
 
           <!-- Tarjeta 2 -->
-          <div class="relative group rounded-xl overflow-hidden shadow-lg">
+          <a
+            href="services.html#IA"
+            class="block relative group rounded-xl overflow-hidden shadow-lg"
+          >
             <img
               src="images/index/Services2.png"
               alt="Servicio 2"
@@ -173,16 +174,19 @@
             <div
               class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"
             ></div>
-            <a
-              href="services.html#IA"
+            <!-- cambiamos el <a> interior por un <span> -->
+            <span
               class="absolute bottom-4 left-4 bg-white text-black font-semibold py-2 px-4 rounded-full text-sm hover:bg-zinc-200 transition"
             >
               IA aplicada al crecimiento empresarial (Business Intelligence)
-            </a>
-          </div>
+            </span>
+          </a>
 
           <!-- Tarjeta 3 -->
-          <div class="relative group rounded-xl overflow-hidden shadow-lg">
+          <a
+            href="services.html#reporting"
+            class="block relative group rounded-xl overflow-hidden shadow-lg"
+          >
             <img
               src="images/index/Services3.png"
               alt="Servicio 3"
@@ -191,16 +195,19 @@
             <div
               class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"
             ></div>
-            <a
-              href="services.html#reporting"
+            <!-- cambiamos el <a> interior por un <span> -->
+            <span
               class="absolute bottom-4 left-4 bg-white text-black font-semibold py-2 px-4 rounded-full text-sm hover:bg-zinc-200 transition"
             >
               Visualización de datos a tiempo real (Reporting)
-            </a>
-          </div>
+            </span>
+          </a>
 
           <!-- Tarjeta 4 -->
-          <div class="relative group rounded-xl overflow-hidden shadow-lg">
+          <a
+            href="services.html#diagnostico"
+            class="block relative group rounded-xl overflow-hidden shadow-lg"
+          >
             <img
               src="images/index/Services4.png"
               alt="Servicio 4"
@@ -209,13 +216,13 @@
             <div
               class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"
             ></div>
-            <a
-              href="services.html#diagnostico"
+            <!-- El “botón” interior pasa a ser un span -->
+            <span
               class="absolute bottom-4 left-4 bg-white text-black font-semibold py-2 px-4 rounded-full text-sm hover:bg-zinc-200 transition"
             >
               Diagnóstico Digital + Plan de Acción
-            </a>
-          </div>
+            </span>
+          </a>
         </div>
         <!-- Frase Final. Consulta -->
         <div class="max-w-4xl mx-auto text-center py-20">
@@ -230,7 +237,9 @@
       <div class="h-16 bg-gradient-to-b from-black to-purple-950"></div>
 
       <!--Ventajas-->
-      <section class="relative overflow-hidden py-20 px-6 bg-purple-950">
+      <section
+        class="relative overflow-hidden py-20 px-6 bg-purple-950"
+      >
         <div class="max-w-6xl mx-auto relative z-20">
           <h2 class="text-3xl font-bold text-center mb-12 text-white">
             ¿Por qué elegirnos?

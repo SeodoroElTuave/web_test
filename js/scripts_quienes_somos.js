@@ -69,3 +69,25 @@ window.addEventListener("scroll", () => {
     );
   }
 });
+
+// Cargar texto poco a poco, activar efecto css
+document.addEventListener('DOMContentLoaded', () => {
+      const elementos = document.querySelectorAll('.animate-item');
+
+      const opciones = {
+        root: null,             
+        rootMargin: '0px',
+        threshold: 0.1          
+      };
+
+      const observer = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add('visible');
+            observer.unobserve(entrada.target);
+          }
+        });
+      }, opciones);
+
+      elementos.forEach(el => observer.observe(el));
+    });
