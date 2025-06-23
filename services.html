@@ -72,7 +72,10 @@
 
     <!-- Contenido principal -->
     <!-- Imágenes flotantes -->
-    <div class="absolute inset-0 z-0 pointer-events-none">
+
+    <div
+      class="absolute inset-x-0 top-0 h-screen overflow-hidden z-0 pointer-events-none"
+    >
       <!-- Imagen 1 -->
       <img
         src="images/services/blur_img1.png"
@@ -87,11 +90,11 @@
         class="absolute top-48 right-32 w-120 md:w-[850px] rounded-xl shadow-xl blur-sm hover:blur-none transition duration-700 ease-in-out animate-[float2_5s_ease-in-out_infinite]"
       />
 
-      <!-- Imagen 3 -->
+      <!-- Imagen 3-->
       <img
         src="images/services/blur_img3.png"
         alt=""
-        class="absolute bottom-2/3 md:bottom-2/3 left-1/3 w-96 md:w-[900px] rounded-xl shadow-lg blur-sm hover:blur-none transition duration-700 ease-in-out animate-[float3_14s_ease-in-out_infinite]"
+        class="absolute top-2/3 md:top-1/3 left-1/3 w-96 md:w-[900px] rounded-xl shadow-lg blur-sm hover:blur-none transition duration-700 ease-in-out animate-[float3_14s_ease-in-out_infinite]"
       />
     </div>
 
@@ -192,11 +195,20 @@
     <section id="automatizacion" class="bg-[rgb(0,34,77)] py-12">
       <div class="container mx-auto px-4">
         <h2
-          class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-indigo-400 via-blue-200 to-purple-700 bg-clip-text text-transparent"
+          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-indigo-400 via-blue-200 to-purple-700 bg-clip-text text-transparent"
         >
           Automatización y Productividad
         </h2>
-        <p class="text-center text-gray-400 mb-8">
+
+        <div class="flex justify-center mb-8">
+          <img
+            src="images/services/service1.png"
+            alt="Automatizacion_y_productividad"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-3xl"
+          />
+        </div>
+
+        <p class="text-center text-gray-400 mb-8 text-lg">
           Descubre todo lo que podemos ofrecerte para impulsar tu negocio al
           siguiente nivel
         </p>
@@ -207,7 +219,7 @@
           >
             <img
               src="/path/to/image1.jpg"
-              alt="Servicio 1"
+              alt="automatizacion_Servicio 1"
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
@@ -234,7 +246,7 @@
           >
             <img
               src="/path/to/image2.jpg"
-              alt="Servicio 2"
+              alt="automatizacion_Servicio 2"
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
@@ -262,7 +274,7 @@
           >
             <img
               src="/path/to/image3.jpg"
-              alt="Servicio 3"
+              alt="automatizacion_Servicio 3"
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
@@ -289,7 +301,7 @@
           >
             <img
               src="/path/to/image4.jpg"
-              alt="Servicio 4"
+              alt="automatizacion_Servicio 4"
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
@@ -323,11 +335,18 @@
     <section id="IA" class="bg-[rgb(93,14,65)] py-12">
       <div class="container mx-auto px-4">
         <h2
-          class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-600 bg-clip-text text-transparent"
+          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-rose-400 via-fuchsia-400 to-indigo-600 bg-clip-text text-transparent"
         >
           Business Intelligence
         </h2>
-        <p class="text-center text-gray-400 mb-8">
+        <div class="flex justify-center mb-8">
+          <img
+            src="images/services/service2.png"
+            alt="IA"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-3xl"
+          />
+        </div>
+        <p class="text-center text-gray-400 mb-8 text-lg">
           Descubre como la IA puede ayudarte a tomar decisiones más precisas y
           hacer tu negocio más autónomo y eficiente.
         </p>
@@ -338,7 +357,7 @@
           >
             <img
               src="/path/to/image1.jpg"
-              alt="Servicio 1"
+              alt="IA_Servicio 1"
               class="w-full h-48 object-cover"
             />
             <div class="p-6 flex-1 flex flex-col">
@@ -380,21 +399,28 @@
     <section id="reporting" class="bg-[rgb(160,21,62)] py-12">
       <div class="container mx-auto px-4">
         <h2
-          class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-indigo-600 via-orange-400 to-purple-400 bg-clip-text text-transparent"
+          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-indigo-600 via-pink-400 to-blue-500 bg-clip-text text-transparent"
         >
           Visualización de datos - Reporting
         </h2>
-        <p class="text-center text-gray-400 mb-8">
+        <div class="flex justify-center mb-8">
+          <img
+            src="images/services/service3.png"
+            alt="Reporting"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-3xl"
+          />
+        </div>
+        <p class="text-center text-gray-400 mb-8 text-lg">
           Tus números, en tiempo real
         </p>
         <div class="grid grid-cols-1 gap-8 justify-items-center">
           <!-- Reporting -->
           <div
-            class="bg-gradient-to-br from-indigo-800 to-orange-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col max-w-2xl"
+            class="bg-gradient-to-br from-indigo-800 to-pink-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col max-w-2xl"
           >
             <img
               src="/path/to/image1.jpg"
-              alt="Servicio 1"
+              alt="Reporting_Servicio 1"
               class="w-full h-48 object-cover"
             />
             <div class="p-6 flex-1 flex flex-col">
@@ -426,130 +452,118 @@
     </section>
 
     <div
-      class="h-16 bg-gradient-to-b from-[rgb(160,21,62)] to-[rgb(255,32,78)]"
+      class="h-16 bg-gradient-to-b from-[rgb(160,21,62)] to-[rgb(255,32,78,0.6)]"
     ></div>
 
     <!-- Sección de Diagnostico Digital-->
-    <section id="diagnostico" class="bg-[rgb(255,32,78)] py-12">
+    <section id="diagnostico" class="bg-[rgb(255,32,78,0.6)] py-12">
       <div class="container mx-auto px-4">
         <h2
-          class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-500 to-violet-900 bg-clip-text text-transparent"
+          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-indigo-800 via-pink-500 to-violet-500 bg-clip-text text-transparent"
         >
-          Diagnostico Digital y Plan de acción
+          Diagnóstico Digital y Plan de acción
         </h2>
-        <p class="text-center text-gray-800 mb-8">
+        <div class="flex justify-center mb-8">
+          <img
+            src="images/services/service4.png"
+            alt="Diagnostico"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-3xl"
+          />
+        </div>
+        <p class="text-center text-gray-800 mb-8 text-lg">
           ¿No sabes por dónde empezar? Nosotros analizamos tu empresa y te
           decimos qué procesos puedes mejorar, automatizar o digitalizar. Paso a
           paso, y adaptado a tu realidad.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- O365 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Evaluacion -->
           <div
-            class="bg-gradient-to-br from-indigo-700 to-violet-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             <img
               src="/path/to/image1.jpg"
-              alt="Servicio 1"
+              alt="catchup_Servicio 1"
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
-                Implantación y Optimización de Microsoft 365
+                Evaluación de negocio y Mapa de oportunidades
               </h3>
               <h4 class="text-sm text-indigo-400 mb-3">
-                Moderniza tu forma de trabajar.
+                Analizamos tu empresa y te ofrecemos varias opciones de
+                digitalizacion.
               </h4>
               <p class="text-gray-300 text-sm">
-                Configuración de cuentas, organización de usuarios, permisos y
-                protección. Almacenamiento en la nube y copias de seguridad. Ten
-                todos tus archivos y procesos en un mismo sistema.
+                Servicio de diagnóstico en el que analizamos cómo funciona tu
+                empresa hoy (procesos, herramientas, tareas repetitivas, uso de
+                datos...) y te entregamos un informe práctico con oportunidades
+                concretas de mejora, usando tecnologías actuales y en la nube.
               </p>
               <p class="text-red-400 text-sm mt-5">
-                Mejora la seguridad y el control de tu empresa. Trabaja desde
-                cualquier sitio, sin complicaciones.
+                Visión clara y realista, sin palabras técnicas. Aclara qué hacer
+                primero y cuánto puede costar. Identifica tareas que te hacen
+                perder tiempo y afectan a tus ganancias.
               </p>
             </div>
           </div>
-          <!-- Soluciones -->
+          <!-- Formaciones -->
           <div
-            class="bg-gradient-to-br from-indigo-700 to-violet-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             <img
               src="/path/to/image2.jpg"
-              alt="Servicio 2"
+              alt="catchup_Servicio 2"
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
-                Desarrollo de Aplicaciones
+                Formaciones de digitalización para tu empresa
               </h3>
               <h4 class="text-sm text-indigo-400 mb-3">
-                Soluciones completas y automatizaciones personalizadas que se
-                adaptan exactamente a cómo trabaja tu empresa.
+                Capacita a tu equipo con herramientas digitales que realmente
+                marcan la diferencia.
               </h4>
               <p class="text-gray-300 text-sm">
-                Migración de Excel a Apps centralizadas y seguras.
-                Digitalización de formularios en papel. Registro de incidencias.
-                Soluciones de contabilidad. Registros de vacaciones con
-                calendarios actualizados y exportables
+                Ofrecemos formaciones prácticas y accesibles en Microsoft 365,
+                Power Apps, Power BI y uso de inteligencia artificial aplicada a
+                pequeñas y medianas empresas. Tus empleados aprenderán a
+                utilizar estas herramientas para ser más eficientes, ahorrar
+                tiempo y tomar mejores decisiones. Nos enfocamos en ejemplos
+                reales y necesidades concretas de tu empresa, sin tecnicismos
+                innecesarios.
               </p>
               <p class="text-red-400 text-sm mt-5">
-                Ahorra tiempo, reduce errores y aumenta el control.
+                Capacita al equipo sin depender de expertos externos. Mejora la
+                productividad y reduce errores.
               </p>
             </div>
           </div>
-          <!-- Automatizacion -->
+          <!-- Soporte -->
           <div
-            class="bg-gradient-to-br from-indigo-700 to-violet-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             <img
               src="/path/to/image3.jpg"
-              alt="Servicio 3"
+              alt="catchup_Servicio 3"
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
               <h3 class="text-xl font-semibold text-white mb-2">
-                Automatización de tareas
+                Servicio de Soporte y Mejora continua
               </h3>
               <h4 class="text-sm text-indigo-400 mb-3">
-                Elimina pasos manuales, reduce errores y gana tiempo: deja que
-                tus procesos se hagan solos.
+                Te acompañamos después de la implementación, para que saques el
+                máximo provecho a tu solución.
               </h4>
               <p class="text-gray-300 text-sm">
-                Envío de correos automáticos. Recordatorios y notificaciones
-                basadas en tus datos. Generación de documentos y archivos
-                automatizados.
+                Te guiamos para que aproveches todas las funcionalidades de la
+                herramienta implementada, resolvemos tus dudas y ofrecemos
+                soporte sobre su funcionamiento. Porque implementar una solución
+                es solo el primer paso: lo importante es que realmente funcione
+                para ti.
               </p>
               <p class="text-red-400 text-sm mt-5">
-                Reduce los errores operativos automatizando tareas recurrentes.
-              </p>
-            </div>
-          </div>
-          <!-- Alertas -->
-          <div
-            class="bg-gradient-to-br from-indigo-700 to-violet-950 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            <img
-              src="/path/to/image4.jpg"
-              alt="Servicio 4"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-white mb-2">
-                Sistemas de Alertas
-              </h3>
-              <h4 class="text-sm text-indigo-400 mb-3">
-                Recibe avisos automáticos cuando algo importante ocurra (o esté
-                a punto de ocurrir) en tu negocio.
-              </h4>
-              <p class="text-gray-300 text-sm">
-                Gestión de inventario - evita roturas de stock -. Alertas de
-                dirección y operativa. Control de Clientes. Seguimiento de
-                incidencias sin resolver.
-              </p>
-              <p class="text-red-400 text-sm mt-5">
-                Recibe información clave en el momento justo. Detecta problemas
-                antes de que crezcan.
+                Estamos para ayudarte a crecer con lo que ya has construido.
               </p>
             </div>
           </div>
