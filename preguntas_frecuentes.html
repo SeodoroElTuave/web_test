@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ready Innova - FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-gradient-to-b from-white bg-white text-zinc-900">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 z-50 p-4">
+      <button
+        id="menu-button"
+        onclick="toggleSidebar()"
+        class="fixed top-4 left-4 z-50 p-3 flex flex-col justify-between w-12 h-12 bg-transparent border border-transparent rounded-full transition-all duration-300 ease-in-out backdrop-blur-md"
+      >
+        <span class="block w-full h-1.5 bg-gray-700 rounded"></span>
+        <span class="block w-full h-1.5 bg-gray-700 rounded"></span>
+        <span class="block w-full h-1.5 bg-gray-700 rounded"></span>
+      </button>
+    </header>
+    <!-- Sidebar -->
+    <div
+      id="sidebar"
+      class="fixed top-0 left-0 w-70 h-full bg-zinc-800 shadow-lg transform -translate-x-full z-40"
+    >
+      <button
+        onclick="toggleSidebar()"
+        class="block text-lg text-gray-400 hover:text-gray-200 mx-auto mt-10"
+      >
+        <span class="text-3xl md:text-lg leading-none">✖</span>
+        <span class="text-lg ml-5">Cerrar</span>
+      </button>
+      <div class="w-40 h-px bg-white mx-auto my-6"></div>
+      <nav class="p-6 h-full flex flex-col justify-between">
+        <div class="space-y-1">
+          <a
+            href="index.html"
+            class="relative block w-full text-lg text-gray-300 px-4 py-2 rounded transition-colors duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-[2px] before:bg-gray-500 before:scale-x-0 before:origin-center before:transition-transform before:duration-300 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-gray-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:before:scale-x-100 hover:after:scale-x-100"
+          >
+            Inicio
+          </a>
+          <a
+            href="services.html"
+            class="relative block w-full text-lg text-gray-300 px-4 py-2 rounded transition-colors duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-[2px] before:bg-gray-500 before:scale-x-0 before:origin-center before:transition-transform before:duration-300 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-gray-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:before:scale-x-100 hover:after:scale-x-100"
+          >
+            Servicios
+          </a>
+          <a
+            href="quienes_somos.html"
+            class="relative block w-full text-lg text-gray-300 px-4 py-2 rounded transition-colors duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-[2px] before:bg-gray-500 before:scale-x-0 before:origin-center before:transition-transform before:duration-300 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-gray-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:before:scale-x-100 hover:after:scale-x-100"
+          >
+            Quiénes somos
+          </a>
+          <!-- Opción activa: FAQ -->
+          <a
+            href="preguntas_frecuentes.html"
+            class="relative block w-full text-lg text-gray-900 bg-zinc-400 font-semibold px-4 py-2 rounded transition-colors duration-200 before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-zinc-800 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-zinc-800"
+          >
+            Preguntas frecuentes - FAQ
+          </a>
+          <a
+            href="contact.html"
+            class="relative block w-full text-lg text-gray-300 px-4 py-2 rounded transition-colors duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-[2px] before:bg-gray-500 before:scale-x-0 before:origin-center before:transition-transform before:duration-300 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-gray-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:before:scale-x-100 hover:after:scale-x-100"
+          >
+            Contacto
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Contenido principal - FAQ -->
+    <main>
+      <div class="relative w-full h-[20vh] overflow-hidden shadow-lg mb-10">
+        <!-- Imagen de fondo -->
+        <img
+          src="images/preguntas_frecuentes/FAQ1.png"
+          alt="FAQ-image"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+
+        <!-- Capa oscura con blur -->
+        <div
+          class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
+        ></div>
+
+        <!-- Texto encima -->
+        <div class="relative z-10 flex items-center justify-center h-full">
+          <h2 class="text-4xl font-bold text-white text-center px-4">
+            Preguntas Frecuentes
+          </h2>
+        </div>
+      </div>
+      <div class="max-w-[110rem] mx-auto">
+        <!-- SECCION 1: Para quién es y qué se necesita -->
+        <div class="p-6 rounded-xl">
+          <h3 class="text-2xl font-bold text-left mb-10 rounded">
+            1.- ¿Para quién es y qué se necesita?
+          </h3>
+
+          <!-- Pregunta 1 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(1)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Qué tipo de empresas pueden beneficiarse de la digitalización?
+              <span id="icon-1" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-1"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              Cualquier empresa puede beneficiarse, sin importar su tamaño o
+              sector. La digitalización permite optimizar procesos de tu
+              negocio, mejorar la toma de decisiones y optimizar tu seguridad,
+              ya sea en una tienda, una asesoría, una empresa industrial o un
+              despacho profesional.
+            </div>
+          </div>
+          <!-- Pregunta 2 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(2)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Qué necesito para empezar a digitalizar mi negocio?
+              <span id="icon-2" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-2"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              Nada más que una breve conversación inicial. Analizaremos tus
+              necesidades, procesos actuales y objetivos, y te propondremos
+              soluciones adaptadas, sin necesidad de inversiones grandes ni
+              conocimientos técnicos.
+            </div>
+          </div>
+          <!-- Pregunta 3 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(3)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Qué tipo de datos necesito para empezar con visualizaciones de
+              datos o IA?
+              <span id="icon-3" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-3"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              Podemos trabajar con los datos que ya tienes (Excel, bases de
+              datos, CRM, etc.). Lo importante es empezar a organizarlos
+              correctamente. A partir de ahí, podemos ayudarte a visualizar,
+              analizar o incluso predecir tendencias.
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCION 2: Funcionamiento del proyecto -->
+        <div class="p-6 rounded-xl">
+          <h3 class="text-2xl font-bold text-left mb-10 rounded">
+            2.- Funcionamiento del proyecto
+          </h3>
+
+          <!-- Pregunta 4 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(4)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Cuánto cuesta un proyecto de digitalización?
+              <span id="icon-4" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-4"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              El coste varía según el alcance, pero trabajamos con soluciones
+              escalables y adaptadas al presupuesto de PYMEs. Nuestro enfoque es
+              modular: puedes empezar por lo más urgente y crecer poco a poco.
+            </div>
+          </div>
+          <!-- Pregunta 5 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(5)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Tengo que cambiar mis herramientas actuales?
+              <span id="icon-5" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-5"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              No necesariamente. Muchas de nuestras soluciones se integran con
+              herramientas que ya utilizas, como Excel, correo electrónico o
+              software de gestión. Nuestro objetivo es complementar y mejorar,
+              no reemplazar sin necesidad.
+            </div>
+          </div>
+          <!-- Pregunta 6 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(6)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Cuánto tiempo tarda un proyecto en estar en marcha?
+              <span id="icon-6" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-6"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              Depende del tipo de solución, pero muchas veces puedes ver
+              resultados en pocas semanas. Nos enfocamos en implementaciones
+              rápidas, útiles y con impacto desde el primer momento.
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCION 3: Accesibilidad -->
+        <div class="p-6 rounded-xl">
+          <h3 class="text-2xl font-bold text-left mb-10 rounded">
+            3.- Accesibilidad
+          </h3>
+
+          <!-- Pregunta 7 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(7)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Qué pasa si mi equipo no tiene experiencia con tecnología?
+              <span id="icon-7" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-7"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              No hay problema. Nuestras soluciones están pensadas para ser
+              intuitivas y fáciles de usar. Además, ofrecemos formación y
+              acompañamiento para que todo el equipo se sienta cómodo desde el
+              primer día.
+            </div>
+          </div>
+          <!-- Pregunta 8 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(8)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Necesito tener conocimientos técnicos para trabajar con vosotros?
+              <span id="icon-8" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-8"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              En absoluto. Nos encargamos de toda la parte técnica. Te
+              explicamos las soluciones de forma sencilla y diseñamos
+              herramientas que puedas usar sin complicaciones. Además, nuestras
+              formaciones te ayudarán a familiarizarte con el nuevo entorno.
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCION 4: Soporte posterior -->
+        <div class="p-6 rounded-xl">
+          <h3 class="text-2xl font-bold text-left mb-10 rounded">
+            4.- Soporte posterior
+          </h3>
+
+          <!-- Pregunta 9 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(9)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Ofrecéis soporte o formación tras la implementación?
+              <span id="icon-9" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-9"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              Sí. Acompañamos todo el proceso y ofrecemos formación básica para
+              que tú y tu equipo aprovechéis al máximo las soluciones. También
+              puedes contar con soporte técnico si lo necesitas.
+            </div>
+          </div>
+          <!-- Pregunta 10 -->
+          <div
+            class="faq-item bg-white shadow-md rounded-lg p-4 mb-4 border border-zinc-200 hover:bg-gradient-to-r hover:from-white hover:to-sky-100"
+          >
+            <button
+              onclick="toggleFAQ(10)"
+              class="w-full text-left text-lg font-medium flex justify-between items-center"
+            >
+              ¿Qué herramientas utilizáis para digitalizar?
+              <span id="icon-10" class="transition-transform duration-500"
+                >+</span
+              >
+            </button>
+            <div
+              id="faq-10"
+              class="mt-2 text-zinc-700 max-h-0 overflow-hidden transition-all duration-100"
+            >
+              Trabajamos principalmente con Microsoft Power Platform (Power
+              Automate, Power Apps, Power BI), Python (Scikit-Learn y
+              Tensorflow) e integramos otras tecnologías según el caso: IA,
+              servicios cloud, bases de datos o tus propias herramientas
+              actuales.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-24"></div>
+      <div class="w-full h-[3px] bg-black"></div>
+      <!--Footer-->
+      <footer class="bg-slate-800 text-black">
+        <div class="w-full mx-auto text-center">
+          <!-- Contenedor blanco para el texto principal -->
+          <div class="bg-white p-8 shadow-lg">
+            <h2 class="text-lg md:text-3xl font-semibold leading-relaxed">
+              ¿Listo para descubrir cómo la tecnología puede ayudarte a trabajar
+              mejor cada día?
+            </h2>
+            <div class="mb-10"></div>
+            <!-- Botón de contacto -->
+            <a
+              href="contact.html"
+              class="bg-white text-black font-semibold px-10 py-3 rounded-full hover:bg-blue-500 hover:text-white transition duration-300 border-2 border-black"
+            >
+              Contáctenos
+            </a>
+          </div>
+
+          <!-- Sección negra con botón y redes sociales -->
+          <div
+            class="bg-black text-whitep-6 flex flex-col items-center space-y-6 h-20"
+          >
+            <!-- Redes sociales -->
+            <div class="flex space-x-6 mt-3">
+              <a
+                href="https://instagram.com/tu_negocio"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <svg
+                  class="w-6 h-6 fill-current text-white hover:text-sky-300 transition"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.2c3.2 0 3.6 0 4.8.1 1.1.1 1.8.2 2.3.5.6.3 1.1.7 1.5 1.5.3.5.5 1.2.5 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.1-.2 1.8-.5 2.3-.3.6-.7 1.1-1.5 1.5-.5.3-1.2.5-2.3.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.1-.1-1.8-.2-2.3-.5-.6-.3-1.1-.7-1.5-1.5-.3-.5-.5-1.2-.5-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.1.2-1.8.5-2.3.3-.6.7-1.1 1.5-1.5.5-.3 1.2-.5 2.3-.5C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7.1.1c-1.3.1-2.3.3-3.2.7C2.5 1.3 1.7 2.1 1.1 3.2.7 4.1.5 5.1.4 6.4.3 7.6.3 8 0 12c.3 4 .3 4.4.4 5.6.1 1.3.3 2.3.7 3.2.6 1.1 1.4 1.9 2.5 2.5.9.4 1.9.6 3.2.7 1.2.1 1.6.1 5.6.1s4.4 0 5.6-.1c1.3-.1 2.3-.3 3.2-.7 1.1-.6 1.9-1.4 2.5-2.5.4-.9.6-1.9.7-3.2.1-1.2.1-1.6.1-5.6s0-4.4-.1-5.6c-.1-1.3-.3-2.3-.7-3.2-.6-1.1-1.4-1.9-2.5-2.5-.9-.4-1.9-.6-3.2-.7C15.7 0 15.3 0 12 0z"
+                  />
+                  <path
+                    d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.7a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/tu_negocio"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  class="w-6 h-6 fill-current text-white hover:text-sky-300 transition"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.025-3.037-1.849-3.037-1.851 0-2.135 1.444-2.135 2.939v5.667H9.355V9h3.414v1.561h.048c.476-.899 1.637-1.848 3.37-1.848 3.602 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.985 20.452H3.685V9h3.3z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Script -->
+    <script src="js/scripts_preguntas_frecuentes.js"></script>
+  </body>
+</html>
