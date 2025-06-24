@@ -2,23 +2,34 @@ let sidebarOpen = false;
 
 const sidebar = document.getElementById("sidebar");
 const menuBtn = document.getElementById("menu-button");
-const text1 = document.getElementById("text1");
-const text2 = document.getElementById("text2");
+const overlay = document.getElementById("overlay");
 
 function toggleSidebar() {
   sidebarOpen = !sidebarOpen;
-  if (sidebarOpen) {
-    sidebar.classList.remove("-translate-x-full");
-    menuBtn.classList.add("hidden");
-  } else {
-    sidebar.classList.add("-translate-x-full");
 
-    // Retrasar la aparición del botón 300ms
-    setTimeout(() => {
-      menuBtn.classList.remove("hidden");
-    }, 300);
+  if (sidebarOpen) {
+    // mostrar sidebar + overlay
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+    menuBtn.classList.add("hidden");
+
+    // solo en móvil (<768px)
+    if (window.innerWidth < 768) {
+      document.body.classList.add("overflow-hidden");
+    }
+  } else {
+    // ocultar sidebar + overlay
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+    menuBtn.classList.remove("hidden");
+
+    // solo en móvil
+    if (window.innerWidth < 768) {
+      document.body.classList.remove("overflow-hidden");
+    }
   }
 }
+
 
 const vh = window.innerHeight;
 
