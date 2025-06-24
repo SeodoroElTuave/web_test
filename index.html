@@ -10,13 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-1nK4Lh4k+lvKWDq0npFl8EF3WoWFMiyV6GE5ZQW2h+I5UGb3XwoLZIKIv2HCe5FVfPGaAf0Xjwr6JzM5EjxYbg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
   <body class="bg-gradient-to-b from-white via-zinc-100 to-black text-zinc-900">
     <!-- Header -->
@@ -230,11 +223,13 @@
         </div>
       </section>
 
-      <div class="h-16 bg-gradient-to-b from-black to-purple-950"></div>
+      <div
+        class="h-16 md:h-36 bg-gradient-to-b from-black to-slate-950 brightness-75"
+      ></div>
 
       <!--Ventajas-->
       <section
-        class="relative overflow-hidden py-20 px-6 bg-purple-950"
+        class="relative overflow-hidden py-40 px-6 bg-[url('images/index/por_que_elegirnos.png')] bg-no-repeat bg-cover bg-[center_65%]"
       >
         <div class="max-w-6xl mx-auto relative z-20">
           <h2 class="text-3xl font-bold text-center mb-12 text-white">
@@ -244,6 +239,7 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
             <!-- Ventaja 1 -->
             <div
+              id="card-1"
               style="background-color: rgb(99, 89, 133)"
               class="p-10 rounded-xl shadow-xl transition-all duration-300 min-h-[22rem] flex flex-col justify-start hover:shadow-2xl hover:scale-105 hover:-translate-y-1"
             >
@@ -256,10 +252,24 @@
                 procesos y diferenciarte en el mercado. Adáptate con agilidad a
                 los cambios y mantente siempre un paso adelante.
               </p>
+              <video
+                class="auto-play-video mt-auto rounded-b-xl overflow-hidden rounded-xl"
+                width="100%"
+                muted
+                playsinline
+                preload="metadata"
+              >
+                <source
+                  src="media/ReadyInnova_Commercial.mp4"
+                  type="video/mp4"
+                />
+                Tu navegador no soporta el elemento <code>video</code>.
+              </video>
             </div>
 
             <!-- Ventaja 2 -->
             <div
+              id="card-2"
               style="background-color: rgb(68, 60, 104)"
               class="p-10 rounded-xl shadow-xl transition-all duration-300 min-h-[22rem] flex flex-col justify-start hover:shadow-2xl hover:scale-105 hover:-translate-y-1"
             >
@@ -272,10 +282,24 @@
                 seguridad en la nube. Digitalizar es también ganar control y
                 confianza en cada proceso del día a día.
               </p>
+              <video
+                class="auto-play-video mt-auto rounded-b-xl overflow-hidden rounded-xl"
+                width="100%"
+                muted
+                playsinline
+                preload="metadata"
+              >
+                <source
+                  src="media/ReadyInnova_Commercial.mp4"
+                  type="video/mp4"
+                />
+                Tu navegador no soporta el elemento <code>video</code>.
+              </video>
             </div>
 
             <!-- Ventaja 3 -->
             <div
+              id="card-3"
               style="background-color: rgb(57, 48, 83)"
               class="p-10 rounded-xl shadow-xl transition-all duration-300 min-h-[22rem] flex flex-col justify-start hover:shadow-2xl hover:scale-105 hover:-translate-y-1"
             >
@@ -283,12 +307,25 @@
               <h3 class="text-2xl font-semibold mb-4 text-sky-50">
                 Visualización y Control
               </h3>
-              <p class="text-sky-50 text-lg">
+              <p class="text-sky-50 text-lg mb-10">
                 Toma decisiones más rápidas y acertadas con paneles visuales
                 interactivos, métricas en tiempo real y alertas automatizadas.
                 Accede a los datos clave de tu empresa, en el momento justo y
                 con el nivel de detalle que necesitas.
               </p>
+              <video
+                class="auto-play-video mt-auto rounded-b-xl overflow-hidden rounded-xl"
+                width="100%"
+                muted
+                playsinline
+                preload="metadata"
+              >
+                <source
+                  src="media/ReadyInnova_Commercial.mp4"
+                  type="video/mp4"
+                />
+                Tu navegador no soporta el elemento <code>video</code>.
+              </video>
             </div>
           </div>
         </div>

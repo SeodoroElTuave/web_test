@@ -49,17 +49,17 @@ window.addEventListener("scroll", () => {
 });
 
 const text = `Digitalizar tu negocio no es fácil, lo sabemos.\nPero con nosotros, puede ser más rápido, rentable y sorprendentemente sencillo.`;
-  const target = document.getElementById("terminal-text");
+const target = document.getElementById("terminal-text");
 
-  let index = 0;
-  let hasAnimated = false;
+let index = 0;
+let hasAnimated = false;
 
   function typeWriter() {
     if (index < text.length) {
       const char = text[index] === '\n' ? '<br/>' : text[index];
       target.innerHTML += char;
       index++;
-      setTimeout(typeWriter, 35);
+      setTimeout(typeWriter, 18);
     }
   }
 
@@ -76,3 +76,33 @@ const text = `Digitalizar tu negocio no es fácil, lo sabemos.\nPero con nosotro
   );
 
   observer.observe(target);
+
+
+ document.addEventListener('DOMContentLoaded', () => {
+    const videos = document.querySelectorAll('video.auto-play-video');
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        const vid = entry.target;
+        if (entry.isIntersecting) {
+          vid.play().catch(() => {
+            console.warn('Autoplay bloqueado en ', vid);
+          });
+          // dejamos de observar este vídeo (no queremos re-disparar un replay automático)
+          obs.unobserve(vid);
+        }
+      });
+    }, {
+      threshold: 0.5 // al menos 50% visible
+    });
+
+    // arrancamos la observación en todos
+    videos.forEach(v => {
+      observer.observe(v);
+      // al acabar, nos quedamos en el último fotograma
+      v.addEventListener('ended', () => {
+        v.pause();
+        v.currentTime = v.duration;
+      });
+    });
+  }); 
