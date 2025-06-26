@@ -32,15 +32,17 @@
     <!-- Sidebar -->
     <div
       id="sidebar"
-      class="fixed top-0 left-0 w-70 h-full bg-gradient-to-b from-black to-gray-900 shadow-lg transform -translate-x-full z-40"
+      class="fixed top-0 left-0 w-70 h-full bg-gradient-to-b from-gray-900 via-slate-800 to-black shadow-lg transform -translate-x-full z-40"
     >
-      <button
-        onclick="toggleSidebar()"
-        class="block text-lg text-gray-400 hover:text-gray-200 mx-auto mt-10"
-      >
-        <span class="text-3xl md:text-lg leading-none">✖</span>
-        <span class="text-lg ml-5">Cerrar</span>
-      </button>
+      <div class="text-center mt-10">
+        <button
+          onclick="toggleSidebar()"
+          class="inline-flex items-center space-x-2 hover:text-gray-200"
+        >
+          <span class="text-5xl md:text-3lg leading-none text-red-500">✖︎</span>
+          <span class="text-lg text-gray-400">Cerrar</span>
+        </button>
+      </div>
       <div class="w-40 h-px bg-white mx-auto my-6"></div>
       <nav class="p-6 h-full flex flex-col justify-between">
         <div class="space-y-1">
@@ -51,8 +53,6 @@
           >
             Inicio
           </a>
-
-          <!-- Opciones normales con hover distinto -->
           <a
             href="services.html"
             class="relative block w-full text-lg text-gray-300 px-4 py-2 rounded transition-colors duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-[2px] before:bg-gray-500 before:scale-x-0 before:origin-center before:transition-transform before:duration-300 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-gray-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:before:scale-x-100 hover:after:scale-x-100"
@@ -80,9 +80,9 @@
 
           <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
             <img
-              src="images/logos/logo_big.png"
+              src="images/logos/Logo - S_ no background.png"
               alt="Logo de la empresa"
-              class="h-12 w-auto"
+              class="h-24 w-auto"
             />
           </div>
         </div>
@@ -96,7 +96,6 @@
         <!-- Vídeo PC -->
         <video
           autoplay
-          loop
           muted
           playsinline
           class="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
@@ -108,7 +107,6 @@
         <!-- Vídeo Móvil -->
         <video
           autoplay
-          loop
           muted
           playsinline
           class="absolute inset-0 w-full h-full object-cover object-center z-0 block md:hidden"
@@ -116,17 +114,30 @@
           <source src="media/Ready Innova_mobile.mp4" type="video/mp4" />
           Tu navegador no soporta vídeos HTML5.
         </video>
+
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 w-full max-w-md flex flex-row justify-center items-center gap-4"
+        >
+          <button
+            onclick="document.getElementById('business-transform').scrollIntoView({ behavior: 'smooth' })"
+            class="bg-gradient-to-r from-sky-500 via-indigo-500 to-fuchsia-600 text-indigo-100 font-semibold px-6 py-2 rounded-full hover:bg-zinc-300 transition duration-300 shadow-lg gradient-animated-loop"
+          >
+            Ver más
+          </button>
+          <a
+            href="contact.html"
+            class="bg-black text-white font-semibold px-6 py-2 rounded-full hover:bg-zinc-800 transition duration-300 shadow-lg"
+          >
+            Contacto
+          </a>
+        </div>
       </div>
 
-      <!-- Logo por encima del vídeo -->
-      <!-- <img
-        src="images/logo.png"
-        alt="Logo de la empresa"
-        class="relative z-10 w-[400px] h-auto"
-      />-->
-
       <!-- Texto estilo digital -->
-      <div class="w-full bg-black py-20 px-6 flex flex-col items-center">
+      <div
+        id="business-transform"
+        class="w-full bg-black py-20 px-6 flex flex-col items-center"
+      >
         <img
           src="images/index/header_BusinessTransformationContrast.png"
           alt="BusinessTransformationContrast"
@@ -352,18 +363,17 @@
         </div>
       </section>
 
-      <div class="w-full h-[3px] bg-black"></div>
-
       <!--Footer-->
       <footer class="bg-black text-black">
+        <div class="w-full h-[3px] bg-black"></div>
         <div class="w-full mx-auto text-center">
           <!-- Contenedor blanco para el texto principal -->
           <div class="bg-white p-8 shadow-lg">
-            <div class="flex justify-center mb-4">
+            <div class="flex justify-center items-center bg-white">
               <img
-                src="images/logos/logo_big.png"
-                alt="Logo de la empresa"
-                class="h-12 w-auto"
+                src="images/logos/Logo - XL.png"
+                alt="Logotipo de la empresa"
+                class="h-52 w-auto justify-center"
               />
             </div>
             <h2 class="text-lg md:text-3xl font-semibold leading-relaxed">
@@ -382,7 +392,7 @@
 
           <!-- Sección negra con botón y redes sociales -->
           <div
-            class="bg-black text-whitep-6 flex flex-col items-center space-y-6 mb-10"
+            class="bg-black text-white flex flex-col items-center space-y-6 pb-10"
           >
             <!-- Redes sociales -->
             <div class="flex space-x-6 mt-3">
@@ -392,7 +402,7 @@
                 aria-label="Instagram"
               >
                 <svg
-                  class="w-6 h-6 fill-current text-white hover:text-sky-300 transition"
+                  class="w-6 h-6 fill-current text-white bg-gradient-to-r from-orange-400 via-pink-500 to-purple-700 md:bg-none md:hover:bg-gradient-to-r from-orange-400 via-pink-500 to-purple-700 transition"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -409,7 +419,7 @@
                 aria-label="LinkedIn"
               >
                 <svg
-                  class="w-6 h-6 fill-current text-white hover:text-sky-300 transition"
+                  class="w-6 h-6 fill-current text-white bg-gradient-to-r from-sky-300 to-blue-600 md:bg-none md:hover:bg-gradient-to-r from-sky-300 to-blue-600 transition"
                   viewBox="0 0 24 24"
                 >
                   <path

@@ -142,7 +142,7 @@ const typewriter = document.getElementById("typewriter");
 const showBtn = document.getElementById("show-info-btn");
 
 const message = `🎓 <strong>Titulaciones</strong>:
-- Graduado en Ingeniería Informática
+- Ingeniería Informática
 <em>Universidad de Salamanca</em>
 - Máster en Bolsa y Mercados Financieros
 <em>EAE Business School</em>
@@ -207,7 +207,6 @@ document.addEventListener("click", function (e) {
   if (
     window.innerWidth < 768 && // Solo en móviles
     isVisible && // Solo si la caja está visible
-    !hoverBox.contains(e.target) &&
     !contactCard.contains(e.target) &&
     !showBtn.contains(e.target)
   ) {

@@ -61,3 +61,32 @@
   animation: fadeInBright 1.5s ease-out 0.5s forwards;
 }
 
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-move 3s linear infinite;
+}
+
+@keyframes gradient-loop {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-animated-loop {
+  background-size: 200% 200%;
+  animation: gradient-loop 8s ease-in-out infinite;
+}
