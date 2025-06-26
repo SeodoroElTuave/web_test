@@ -44,7 +44,7 @@ window.addEventListener("scroll", () => {
   }
 
   // A partir del 50% de scroll de la primera pantalla, mostramos el texto2
-  if (y > vh * 0.2) {
+  if (y > vh * 0.35) {
     text2.classList.add("opacity-100");
   } else {
     text2.classList.remove("opacity-100");
