@@ -35,7 +35,9 @@
           onclick="toggleSidebar()"
           class="inline-flex items-center space-x-2 hover:text-gray-200"
         >
-          <span class="text-5xl md:text-3lg leading-none text-red-500">✖︎</span>
+          <span class="text-5xl md:text-3lg leading-none text-red-500 mr-3"
+            >✖︎</span
+          >
           <span class="text-lg text-gray-400">Cerrar</span>
         </button>
       </div>
@@ -624,12 +626,64 @@
           </a>
         </div>
 
+        <!-- Sección negra con enlaces responsive -->
+        <div class="bg-black text-white py-6">
+          <div class="max-w-4xl mx-auto">
+            <nav aria-label="Enlaces secundarios">
+              <ul
+                class="grid grid-cols-2 gap-4 text-center text-sm sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:space-x-2 sm:text-base"
+              >
+                <li class="flex items-center justify-center">
+                  <a
+                    href="index.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Inicio
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="services.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Servicios
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="quienes_somos.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    ¿Quiénes somos?
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="preguntas_frecuentes.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Preguntas frecuentes
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="contact.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Contacto
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
         <!-- Sección negra con botón y redes sociales -->
         <div
-          class="bg-black text-white flex flex-col items-center space-y-6 pb-10"
+          class="bg-black text-white flex flex-col items-center space-y-6 pb-10 mt-2"
         >
           <!-- Redes sociales -->
-          <div class="flex space-x-6 mt-3">
+          <div class="flex space-x-6">
             <a
               href="https://instagram.com/tu_negocio"
               target="_blank"
@@ -665,6 +719,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Script -->
     <script src="js/scripts_services.js"></script>
   </body>
