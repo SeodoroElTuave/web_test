@@ -185,11 +185,11 @@ function hideBox() {
 
 // Hover en escritorio
 contactCard.addEventListener("mouseenter", () => {
-  if (window.innerWidth >= 768) showBox();
+  if (window.innerWidth >= 1024) showBox();
 });
 
 contactCard.addEventListener("mouseleave", () => {
-  if (window.innerWidth >= 768) hideBox();
+  if (window.innerWidth >= 1024) hideBox();
 });
 
 // Clic en móvil
@@ -205,7 +205,7 @@ showBtn.addEventListener("click", () => {
 
 document.addEventListener("click", function (e) {
   if (
-    window.innerWidth < 768 && // Solo en móviles
+    window.innerWidth < 1024 && // Solo en móviles
     isVisible && // Solo si la caja está visible
     !contactCard.contains(e.target) &&
     !showBtn.contains(e.target)
