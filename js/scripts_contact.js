@@ -53,6 +53,9 @@ const errorReason = document.getElementById("error-reason");
 const errorMessage = document.getElementById("error-message");
 const errorContact = document.getElementById("error-contact");
 
+const privacyCheckbox = document.getElementById("privacy-policy");
+const errorPrivacy = document.getElementById("error-privacy");
+
 const dropdownToggle = document.getElementById("dropdownToggle");
 const dropdownOptions = document.getElementById("dropdownOptions");
 const selectedText = document.getElementById("selectedText");
@@ -127,6 +130,14 @@ form.addEventListener("submit", (e) => {
     errorContact.classList.add("hidden");
     phoneInput.classList.remove("border-red-500");
     emailInput.classList.remove("border-red-500");
+  }
+
+  // Validación de checkbox politica de privacidad
+  if (!privacyCheckbox.checked) {
+    errorPrivacy.classList.remove("hidden");
+    valid = false;
+  } else {
+    errorPrivacy.classList.add("hidden");
   }
 
   if (!valid) {
