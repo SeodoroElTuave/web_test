@@ -60,6 +60,10 @@ const dropdownToggle = document.getElementById("dropdownToggle");
 const dropdownOptions = document.getElementById("dropdownOptions");
 const selectedText = document.getElementById("selectedText");
 
+// --- Regex reutilizables ---
+const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const phoneRe = /^\d{9}$/;
+
 // Mostrar opciones al hacer clic
 dropdownToggle.addEventListener("click", () => {
   dropdownOptions.classList.toggle("hidden");
@@ -72,7 +76,6 @@ dropdownOptions.querySelectorAll("li").forEach((item) => {
     selectedText.textContent = label;
     reasonInput.value = item.dataset.value;
 
-    // Oculta el error si elige algo válido
     errorReason.classList.add("hidden");
     dropdownToggle.classList.remove("border-red-500");
 
@@ -80,11 +83,36 @@ dropdownOptions.querySelectorAll("li").forEach((item) => {
   });
 });
 
+// Teléfono: solo dígitos y máximo 9
+phoneInput.addEventListener("input", function () {
+  this.value = this.value.replace(/\D/g, "").slice(0, 9);
+  // limpiar error si ahora cumple
+  if (this.value === "" || phoneRe.test(this.value)) {
+    this.setCustomValidity("");
+    phoneInput.classList.remove("border-red-500");
+  }
+});
+
+// Email: validación en tiempo real (solo si no está vacío)
+emailInput.addEventListener("input", function () {
+  if (this.value.trim() === "" || emailRe.test(this.value.trim())) {
+    this.setCustomValidity("");
+    emailInput.classList.remove("border-red-500");
+  } else {
+    this.setCustomValidity("Introduce un correo válido (ejemplo@dominio.com)");
+  }
+});
+
 // Validación del formulario
-form.addEventListener("submit", (e) => {
+function handleSubmit(e) {
   let valid = true;
 
-  // Validación del nombre
+  // reset estados
+  [nameInput, messageInput, phoneInput, emailInput].forEach((el) =>
+    el.setCustomValidity("")
+  );
+
+  // Nombre
   if (!nameInput.value.trim()) {
     errorName.classList.remove("hidden");
     nameInput.classList.add("border-red-500");
@@ -94,10 +122,9 @@ form.addEventListener("submit", (e) => {
     nameInput.classList.remove("border-red-500");
   }
 
-  // Validación del motivo (dropdown)
+  // Motivo (dropdown)
   const reasonText = selectedText.textContent.trim();
   const reasonValue = reasonInput.value.trim();
-
   if (!reasonValue || reasonText === "Selecciona una opción") {
     errorReason.classList.remove("hidden");
     dropdownToggle.classList.add("border-red-500");
@@ -107,7 +134,7 @@ form.addEventListener("submit", (e) => {
     dropdownToggle.classList.remove("border-red-500");
   }
 
-  // Validación del mensaje
+  // Mensaje
   if (!messageInput.value.trim()) {
     errorMessage.classList.remove("hidden");
     messageInput.classList.add("border-red-500");
@@ -117,7 +144,7 @@ form.addEventListener("submit", (e) => {
     messageInput.classList.remove("border-red-500");
   }
 
-  // Validación de contacto: al menos teléfono o correo
+  // Contacto: teléfono O email
   const phoneValue = phoneInput.value.trim();
   const emailValue = emailInput.value.trim();
 
@@ -132,7 +159,23 @@ form.addEventListener("submit", (e) => {
     emailInput.classList.remove("border-red-500");
   }
 
-  // Validación de checkbox politica de privacidad
+  // Si hay email, formato correcto
+  if (emailValue && !emailRe.test(emailValue)) {
+    emailInput.classList.add("border-red-500");
+    emailInput.setCustomValidity("Correo no válido (ejemplo@dominio.com)");
+    valid = false;
+  }
+
+  // Si hay teléfono, 9 dígitos
+  if (phoneValue && !phoneRe.test(phoneValue)) {
+    phoneInput.classList.add("border-red-500");
+    phoneInput.setCustomValidity(
+      "Teléfono no válido: usa 9 dígitos (sin espacios)."
+    );
+    valid = false;
+  }
+
+  // Política de privacidad
   if (!privacyCheckbox.checked) {
     errorPrivacy.classList.remove("hidden");
     valid = false;
@@ -141,9 +184,19 @@ form.addEventListener("submit", (e) => {
   }
 
   if (!valid) {
-    e.preventDefault(); // Evita el envío si hay errores
+    e.preventDefault();
+    emailInput.reportValidity();
+    phoneInput.reportValidity();
+    return;
   }
-});
+
+
+  e.preventDefault();
+  form.removeEventListener("submit", handleSubmit);
+  form.submit();
+}
+
+form.addEventListener("submit", handleSubmit);
 
 // Texto titulaciones
 

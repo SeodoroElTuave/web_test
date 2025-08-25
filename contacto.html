@@ -46,6 +46,13 @@
       name="twitter:image"
       content="https://readyinnova.com/images/logos/preview.png"
     />
+
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -168,24 +175,22 @@
           <div class="p-6 space-y-3">
             <p class="text-gray-800">
               📞
-              <a href="tel:+34123456789" class="hover:underline"
-                >+34 123 456 789</a
-              >
+              <a href="tel:+34623767997" class="hover:underline">623 767 997</a>
             </p>
             <p class="text-gray-800">
               ✉️
-              <a href="mailto:correo@example.com" class="hover:underline">
-                correo@example.com
+              <a href="mailto:soporte@readyinnova.com" class="hover:underline">
+                soporte@readyinnova.com
               </a>
             </p>
             <p class="text-gray-800">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Avenida+Principe+Asturias+17,+Zamora,+España"
+                href="https://www.google.com/maps/search/?api=1&query=Zamora,+España"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="hover:underline inline-flex items-center"
               >
-                📍 Av. del Príncipe de Asturias, 17, Zamora, España
+                📍 TBD, Zamora, España
               </a>
             </p>
             <div class="flex space-x-6 justify-center">
@@ -260,11 +265,13 @@
       id="contact-form"
       class="w-full max-w-sm md:max-w-2xl bg-[url('images/contact/background_form.png')] object-cover rounded-xl shadow-lg p-6 mt-12 mb-36 space-y-4 opacity-0 filter brightness-0 animate-fade-in-bright transform transition duration-300 ease-in-out mx-auto"
       novalidate
+      action="https://api.web3forms.com/submit"
+      method="POST"
     >
       <div
         class="bg-gradient-to-r from-blue-300 to-indigo-700 text-white rounded-t-xl px-6 py-4 text-center -mt-6 -mx-6"
       >
-        <h2 class="text-2xl font-bold">¡Contacta con nosotros! 😊</h2>
+        <h2 class="text-2xl font-bold">¡Contacta conmigo! 😊</h2>
       </div>
       <!-- Nombre completo (obligatorio) -->
       <div>
@@ -297,12 +304,14 @@
             🇪🇸 +34
           </span>
           <input
-            type="tel"
+            type="text"
             id="phone"
             name="phone"
             class="w-full border border-gray-300 rounded-r px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="123 456 789"
-            pattern="[0-9\s]{9,15}"
+            placeholder="623 123 456"
+            pattern="^\d{9}$"
+            inputmode="numeric"
+            maxlength="9"
           />
         </div>
       </div>
@@ -318,6 +327,8 @@
           name="email"
           class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Tu correo electrónico"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          title="Introduce un correo válido (ejemplo@dominio.com)"
         />
       </div>
 
@@ -443,6 +454,34 @@
         Debes aceptar la Política de Privacidad para continuar.
       </p>
 
+      <input
+        type="hidden"
+        name="access_key"
+        value="46f1afda-139e-40bb-82df-76d67548ed0a"
+      />
+      <input
+        type="hidden"
+        name="subject"
+        value="Nuevo contacto desde readyinnova.com"
+      />
+      <input type="hidden" name="from_name" value="Ready Innova - Web" />
+
+      <!-- Anti-spam (honeypot)-->
+      <input
+        type="checkbox"
+        name="botcheck"
+        id="botcheck"
+        class="hidden"
+        tabindex="-1"
+        autocomplete="off"
+      />
+
+      <input
+        type="hidden"
+        name="redirect"
+        value="https://readyinnova.com/gracias.html"
+      />
+
       <!-- Botón enviar -->
       <div class="text-center">
         <button
@@ -489,10 +528,7 @@
                 class="grid grid-cols-2 gap-4 text-center text-sm sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:space-x-2 sm:text-base"
               >
                 <li class="flex items-center justify-center">
-                  <a
-                    href="/"
-                    class="block w-full py-2 hover:underline"
-                  >
+                  <a href="/" class="block w-full py-2 hover:underline">
                     Inicio
                   </a>
                 </li>
