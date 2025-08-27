@@ -55,6 +55,7 @@
     <meta http-equiv="Expires" content="0" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </head>
   <body
     class="bg-cover bg-center bg-no-repeat min-h-screen flex flex-col"
@@ -178,6 +179,21 @@
               <a href="tel:+34623767997" class="hover:underline">623 767 997</a>
             </p>
             <p class="text-gray-800">
+              <a
+                href="https://wa.me/34623767997"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:underline inline-flex items-center space-x-1"
+              >
+                <img
+                  src="images/logos/whatsapp.png"
+                  alt="WhatsApp"
+                  class="w-5 h-5"
+                />
+                <span>WhatsApp</span>
+              </a>
+            </p>
+            <p class="text-gray-800">
               ✉️
               <a href="mailto:soporte@readyinnova.com" class="hover:underline">
                 soporte@readyinnova.com
@@ -216,7 +232,7 @@
 
               <!-- LinkedIn empresa -->
               <a
-                href="https://www.linkedin.com/company/tu-empresa/"
+                href="https://www.linkedin.com/company/ready-innova/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center text-blue-600 hover:underline"
@@ -263,8 +279,7 @@
     <!-- Formulario de contacto -->
     <form
       id="contact-form"
-      class="w-full max-w-sm md:max-w-2xl bg-[url('images/contact/background_form.png')] object-cover rounded-xl shadow-lg p-6 mt-12 mb-36 space-y-4 opacity-0 filter brightness-0 animate-fade-in-bright transform transition duration-300 ease-in-out mx-auto"
-      novalidate
+      class="w-full max-w-sm md:max-w-2xl bg-[url('images/contact/background_form.png')] object-cover rounded-xl shadow-lg p-6 mt-12 mb-36 space-y-4 animate-fade-in-bright transform transition duration-300 ease-in-out mx-auto"
       action="https://api.web3forms.com/submit"
       method="POST"
     >
@@ -312,6 +327,7 @@
             pattern="^\d{9}$"
             inputmode="numeric"
             maxlength="9"
+            title="Introduce un teléfono válido sin espacios"
           />
         </div>
       </div>
@@ -476,6 +492,14 @@
         autocomplete="off"
       />
 
+      <div class="flex justify-center">
+        <div
+          class="h-captcha block"
+          data-captcha="true"
+          style="min-height: 78px"
+        ></div>
+      </div>
+
       <input
         type="hidden"
         name="redirect"
@@ -609,7 +633,7 @@
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/tu_negocio"
+              href="https://www.linkedin.com/company/ready-innova/"
               target="_blank"
               aria-label="LinkedIn"
             >

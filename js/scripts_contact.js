@@ -175,6 +175,12 @@ function handleSubmit(e) {
     valid = false;
   }
 
+  const token = form.querySelector('textarea[name="h-captcha-response"]')?.value;
+  if (!token) {
+    valid = false;
+    alert("Completa el captcha para enviar.");
+  }
+
   // Política de privacidad
   if (!privacyCheckbox.checked) {
     errorPrivacy.classList.remove("hidden");
@@ -189,11 +195,6 @@ function handleSubmit(e) {
     phoneInput.reportValidity();
     return;
   }
-
-
-  e.preventDefault();
-  form.removeEventListener("submit", handleSubmit);
-  form.submit();
 }
 
 form.addEventListener("submit", handleSubmit);
